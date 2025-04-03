@@ -35,6 +35,7 @@ public class BaseDriver {
     }
 
     public static void CloseFaultyWindows() {
+        // Close any existing instances of ChromeDriver
         try {
             Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
         } catch (Exception ignored) {
