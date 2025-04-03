@@ -94,7 +94,7 @@ public class BaseDriver {
             WebElement billingPhoneNumber = driver.findElement(By.cssSelector("#BillingNewAddress_PhoneNumber"));
             actions.moveToElement(billingPhoneNumber).click().sendKeys("555-555-5555").build().perform();
 
-            WebElement billingContinueButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("input[onclick='Billing.save()']")));
+            WebElement billingContinueButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[onclick='Billing.save()']")));
             billingContinueButton.click();
             System.out.println("Billing information saved.");
         } else {
